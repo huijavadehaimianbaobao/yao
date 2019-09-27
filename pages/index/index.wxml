@@ -1,13 +1,13 @@
 <!--index.wxml-->
 
  <van-tabs active="{{ active }}" >
-  <van-tab disabled="true" title="标签 2">
+  <van-tab disabled="true" title="基本信息">
      
 <van-cell-group>
   <van-field value="{{ username }}" required clearable label="姓名"  placeholder="请输入姓名"  />
-  <van-field value="{{ idCard }}" type="number" label="身份证号" placeholder="请输入身份证号" required/>
+  <van-field value="{{ idCard }}" type="idcard" label="身份证号" placeholder="请输入身份证号" required/>
   <van-field value="{{ age }}" type="number" label="年龄" placeholder="请输入年龄" required > 
-          <van-button slot="button" size="small" type="primary">岁</van-button>
+          <van-button  disabled  size="small" type="primary">岁</van-button>
   </van-field>
   
 
@@ -36,43 +36,60 @@
   <van-field value="{{ age }}" type="text" label="职业" placeholder="请输入职业" required/>
    <van-row>
       <van-col span="12">
-        <van-field value="{{ age }}" type="number" label="身高" placeholder="身高" required > 
-          <van-button slot="button" size="small" type="primary">CM</van-button>
-        </van-field>  
+        <van-field value="{{ age }}" type="number" label="身高" placeholder="CM" required /> 
       </van-col>
       <van-col span="12"> 
-        <van-field value="{{ age }}" type="number" label="体重" placeholder="体重" required > 
-          <van-button slot="button" size="small" type="primary">KG</van-button>
-         </van-field>    
+        <van-field value="{{ age }}" type="number" label="体重" placeholder="KG" required /> 
+             
       </van-col>
    </van-row>
-
+  <van-divider customStyle="color: #1989fa;border-color: #1989fa;" />
    <van-row>
       <van-col span="12">
-        <van-field value="{{ age }}" type="number" label="吸烟史" placeholder="支" required > 
-          <van-button slot="button" size="small" type="primary">支</van-button>
-        </van-field>  
+        <van-field value="{{ age }}" type="number" label="吸烟史" placeholder="支"  required /> 
       </van-col>
       <van-col span="12"> 
-        <van-field value="{{ age }}" type="number" label="体重" placeholder="年" required > 
-          <van-button slot="button" size="small" type="primary">年</van-button>
-         </van-field>    
+        <van-field value="{{ age }}" type="number" label="或"   placeholder="年"  /> 
       </van-col>
    </van-row>
  
+   <van-field value="{{ age }}" type="text" label="饮酒史" placeholder="请输入饮酒史" required/> 
 
+  <van-row>
+      <van-col span="5"><van-field value="{{ age }}" type="number" label="基础疾病"  required /> </van-col>
+        <van-col span="19"> 
+          <van-radio-group value="{{ sickness }}" bind:change="sicknessonChange">
+            <van-radio name="1">肿瘤</van-radio>
+            <van-radio name="2">糖尿病</van-radio>
+            <van-radio name="3">风湿,类风湿</van-radio>
+            <van-radio name="4">红斑狼疮</van-radio>
+            <van-radio name="5">器官移植</van-radio>
+            <van-radio name="6">淋巴瘤</van-radio>
+            <van-radio name="7">AIDS</van-radio>
+            <van-radio name="8">
+              <van-field value="{{age}}" type="text" label="其他免疫疾病"  /> 
+            </van-radio>
+            <van-radio name="9">
+              <van-field value="{{age}}" type="text" label="其他"  /> 
+            </van-radio>
+          </van-radio-group>
+        </van-col>
+    </van-row>
 
+  <van-field value="{{ idCard }}" type="text" label="常用药物" placeholder="请输入常用药物" required/> 
 
-
-
-
-
-
+ <van-button type="primary" bind:click="saveBase" size="large">保存</van-button>
 
 
 </van-cell-group>
   </van-tab>
-  <van-tab disabled="true" title="标签 3">内容 3</van-tab>
-  <van-tab disabled="true" title="标签 4">内容 4</van-tab>
+  <van-tab disabled="true" title="基础概况">
+  
+  
+  
+  
+  
+  </van-tab>
+  <van-tab disabled="true" title="二维码">内容 4</van-tab>
 </van-tabs>
 

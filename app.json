@@ -19,19 +19,19 @@
       "list": [
         {
           "pagePath": "pages/index/index",
-          "text": "ONE"
+          "text": "基础信息"
         },
         {
           "pagePath": "pages/two/two",
-          "text": "TWO"
+          "text": "诊断记录"
         },
         {
           "pagePath": "pages/index/index",
-          "text": "THREE"
+          "text": "取药记录"
         },
         {
           "pagePath": "pages/index/index",
-          "text": "FOUR"
+          "text": "领药记录"
         }
       ]
     }
