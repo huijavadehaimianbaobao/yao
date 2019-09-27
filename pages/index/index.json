@@ -3,7 +3,12 @@
   "i-tab-bar": "/utils/iview/dist/tab-bar/index",
   "i-tab-bar-item": "/utils/iview/dist/tab-bar-item/index",
   "van-tab": "/utils/vant/dist/tab/index",
-  "van-tabs": "/utils/vant/dist/tabs/index"
+  "van-tabs": "/utils/vant/dist/tabs/index",
+  "van-row": "/utils/vant/dist/row/index",
+  "van-col": "/utils/vant/dist/col/index",
+  "van-field": "/utils/vant/dist/field/index",
+  "van-radio": "/utils/vant/dist/radio/index",
+  "van-radio-group": "/utils/vant/dist/radio-group/index"
    
   }
 }

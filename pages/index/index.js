@@ -5,13 +5,21 @@ const app = getApp()
 Page({
   data: {
     current: 'index',
-    active: 0
+    active: 0,
+    sex: '1',
+    marriage:'1'
   },
 
-  onChange(event) {
-    wx.showToast({
-      title: `切换到标签 ${event.detail.index + 1}`,
-      icon: 'none'
+  sexonChange(event) {
+    console.log(event)
+    this.setData({
+      sex: event.detail
+    });
+  },
+  marriageonChange(event) {
+    console.log(event)
+    this.setData({
+      marriage: event.detail
     });
   }
 })

@@ -1,16 +1,78 @@
 <!--index.wxml-->
 
- <van-tabs active="{{ active }}"  bind:change="onChange">
+ <van-tabs active="{{ active }}" >
   <van-tab disabled="true" title="标签 2">
-  
-  
-  
-  
+     
+<van-cell-group>
+  <van-field value="{{ username }}" required clearable label="姓名"  placeholder="请输入姓名"  />
+  <van-field value="{{ idCard }}" type="number" label="身份证号" placeholder="请输入身份证号" required/>
+  <van-field value="{{ age }}" type="number" label="年龄" placeholder="请输入年龄" required > 
+          <van-button slot="button" size="small" type="primary">岁</van-button>
+  </van-field>
   
 
+  <van-row>
+      <van-col span="8"><van-field  required clearable label="请选择性别:"/></van-col>
+      <van-col span="16"> 
+        <van-radio-group value="{{ sex }}" bind:change="sexonChange">
+          <van-radio name="1">男</van-radio>
+          <van-radio name="2">女</van-radio>
+        </van-radio-group>
+      </van-col>
+  </van-row>
   
+  <van-row>
+      <van-col span="8"><van-field  required clearable label="婚姻状况:"/></van-col>
+      <van-col span="16"> 
+        <van-radio-group value="{{ marriage }}" bind:change="marriageonChange">
+          <van-radio name="1">已婚</van-radio>
+          <van-radio name="2">未婚</van-radio>
+        </van-radio-group>
+      </van-col>
+  </van-row>
+  <van-field value="{{ idCard }}" type="text" label="出生地" placeholder="请输入出生地" required/>
+  <van-field value="{{ age }}" type="text" label="常住地" placeholder="请输入常住地址" required/>
+  <van-field value="{{ age }}" type="text" label="民族" placeholder="请输入民族" required/>
+  <van-field value="{{ age }}" type="text" label="职业" placeholder="请输入职业" required/>
+   <van-row>
+      <van-col span="12">
+        <van-field value="{{ age }}" type="number" label="身高" placeholder="身高" required > 
+          <van-button slot="button" size="small" type="primary">CM</van-button>
+        </van-field>  
+      </van-col>
+      <van-col span="12"> 
+        <van-field value="{{ age }}" type="number" label="体重" placeholder="体重" required > 
+          <van-button slot="button" size="small" type="primary">KG</van-button>
+         </van-field>    
+      </van-col>
+   </van-row>
+
+   <van-row>
+      <van-col span="12">
+        <van-field value="{{ age }}" type="number" label="吸烟史" placeholder="支" required > 
+          <van-button slot="button" size="small" type="primary">支</van-button>
+        </van-field>  
+      </van-col>
+      <van-col span="12"> 
+        <van-field value="{{ age }}" type="number" label="体重" placeholder="年" required > 
+          <van-button slot="button" size="small" type="primary">年</van-button>
+         </van-field>    
+      </van-col>
+   </van-row>
+ 
+
+
+
+
+
+
+
+
+
+
+</van-cell-group>
   </van-tab>
-  <van-tab disabled="true" title="标签 3">  as</van-tab>
+  <van-tab disabled="true" title="标签 3">内容 3</van-tab>
   <van-tab disabled="true" title="标签 4">内容 4</van-tab>
 </van-tabs>
 
